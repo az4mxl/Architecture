@@ -8,23 +8,26 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.az.architecture.R;
+import com.az.architecture.mvp.model.ModelImpl;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements LoginContract.View{
 
     private EditText etAccount, etPwd;
     private Button btnLogin;
 
-    private IPresenter iPresenter;
-
+    private LoginContract.Presenter mPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
+
+        mPresenter = new LoginPresenter(new ModelImpl(), this);
 
         initView();
     }
 
-    private void initView() {
+    @Override
+    public void initView() {
         etAccount = (EditText) findViewById(R.id.et_account);
         etPwd = (EditText) findViewById(R.id.et_pwd);
         btnLogin = (Button) findViewById(R.id.btn_login);
@@ -33,20 +36,26 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String acc = etAccount.getText().toString().trim();
                 String pwd = etPwd.toString();
-                boolean isOval = iPresenter.oval(acc, pwd);
+                boolean isOval = mPresenter.oval(acc, pwd);
                 if (isOval) {
-                    iPresenter.login(acc, pwd);
+                    mPresenter.login(acc, pwd);
                 }
             }
         });
     }
 
+    @Override
     public void showProgress() {
         Toast.makeText(this, "登陆开始", Toast.LENGTH_LONG).show();
     }
 
+    @Override
     public void hideProgress() {
         Toast.makeText(this, "登陆结束", Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void setPresenter(LoginContract.Presenter presenter) {
+        this.mPresenter = presenter;
+    }
 }

@@ -9,24 +9,25 @@ import com.az.architecture.mvp.model.ModelImpl;
 
 public class LoginPresenter implements LoginContract.Presenter {
 
-    private LoginActivity view;
-    private IModel model;
+    private LoginContract.View mView;
+    private IModel mModel;
 
-    public LoginPresenter(LoginActivity view){
-        this.view = view;
-        model = new ModelImpl();
+    public LoginPresenter(IModel model, LoginContract.View view){
+        this.mView = view;
+        this.mModel = model;
+        this.mView.setPresenter(this);
     }
 
     @Override
     public boolean oval(String acc, String pwd) {
-        return model.oval(acc, pwd);
+        return mModel.oval(acc, pwd);
     }
 
     @Override
     public void login(String acc, String pwd) {
-        view.showProgress();
-        model.login(acc, pwd);
-        view.hideProgress();
+        mView.showProgress();
+        mModel.login(acc, pwd);
+        mView.hideProgress();
     }
 
     @Override

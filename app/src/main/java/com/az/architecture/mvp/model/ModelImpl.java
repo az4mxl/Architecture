@@ -1,4 +1,4 @@
-package com.az.architecture.mvp;
+package com.az.architecture.mvp.model;
 
 import android.text.TextUtils;
 

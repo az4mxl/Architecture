@@ -102,8 +102,7 @@ public class TasksFragment extends Fragment implements TasksContract.View {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.tasks_frag, container, false);
 
         // Set up tasks view
@@ -232,8 +231,7 @@ public class TasksFragment extends Fragment implements TasksContract.View {
         if (getView() == null) {
             return;
         }
-        final SwipeRefreshLayout srl =
-                (SwipeRefreshLayout) getView().findViewById(R.id.refresh_layout);
+        final SwipeRefreshLayout srl = (SwipeRefreshLayout) getView().findViewById(R.id.refresh_layout);
 
         // Make sure setRefreshing() is called after the layout is done with everything else.
         srl.post(new Runnable() {
@@ -404,10 +402,12 @@ public class TasksFragment extends Fragment implements TasksContract.View {
             // Active/completed task UI
             completeCB.setChecked(task.isCompleted());
             if (task.isCompleted()) {
-                rowView.setBackgroundDrawable(viewGroup.getContext()
+                rowView.setBackgroundDrawable(
+                        viewGroup.getContext()
                         .getResources().getDrawable(R.drawable.list_completed_touch_feedback));
             } else {
-                rowView.setBackgroundDrawable(viewGroup.getContext()
+                rowView.setBackgroundDrawable(
+                        viewGroup.getContext()
                         .getResources().getDrawable(R.drawable.touch_feedback));
             }
 

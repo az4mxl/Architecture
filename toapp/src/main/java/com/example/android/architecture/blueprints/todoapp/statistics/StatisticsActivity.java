@@ -60,16 +60,13 @@ public class StatisticsActivity extends AppCompatActivity {
             setupDrawerContent(navigationView);
         }
 
-        StatisticsFragment statisticsFragment = (StatisticsFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.contentFrame);
+        StatisticsFragment statisticsFragment = (StatisticsFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
         if (statisticsFragment == null) {
             statisticsFragment = StatisticsFragment.newInstance();
-            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
-                    statisticsFragment, R.id.contentFrame);
+            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), statisticsFragment, R.id.contentFrame);
         }
 
-        new StatisticsPresenter(
-                Injection.provideTasksRepository(getApplicationContext()), statisticsFragment);
+        new StatisticsPresenter(Injection.provideTasksRepository(getApplicationContext()), statisticsFragment);
     }
 
     @Override
@@ -90,10 +87,8 @@ public class StatisticsActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
                             case R.id.list_navigation_menu_item:
-                                Intent intent =
-                                        new Intent(StatisticsActivity.this, TasksActivity.class);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                                        | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                Intent intent = new Intent(StatisticsActivity.this, TasksActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                                 break;
                             case R.id.statistics_navigation_menu_item:

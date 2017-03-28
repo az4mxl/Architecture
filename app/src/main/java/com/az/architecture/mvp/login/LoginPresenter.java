@@ -1,15 +1,18 @@
-package com.az.architecture.mvp;
+package com.az.architecture.mvp.login;
+
+import com.az.architecture.mvp.model.IModel;
+import com.az.architecture.mvp.model.ModelImpl;
 
 /**
  * Created by maxinliang on 2017/3/17.
  */
 
-public class PresenterImpl implements IPresenter {
+public class LoginPresenter implements LoginContract.Presenter {
 
-    private MainActivity view;
+    private LoginActivity view;
     private IModel model;
 
-    public PresenterImpl(MainActivity view){
+    public LoginPresenter(LoginActivity view){
         this.view = view;
         model = new ModelImpl();
     }
@@ -26,4 +29,8 @@ public class PresenterImpl implements IPresenter {
         view.hideProgress();
     }
 
+    @Override
+    public void start() {
+
+    }
 }

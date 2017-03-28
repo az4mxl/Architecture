@@ -1,4 +1,4 @@
-package com.az.architecture.mvp;
+package com.az.architecture.mvp.login;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.az.architecture.R;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText etAccount, etPwd;
     private Button btnLogin;

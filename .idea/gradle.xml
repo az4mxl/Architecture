@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mvp-rxjava-hybride" />
             <option value="$PROJECT_DIR$/toapp" />
+            <option value="$PROJECT_DIR$/todoapp-rxjava" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

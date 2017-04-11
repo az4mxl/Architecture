@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Architecture.iml" filepath="$PROJECT_DIR$/Architecture.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apptest-databinding/apptest-databinding.iml" filepath="$PROJECT_DIR$/apptest-databinding/apptest-databinding.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvp-rxjava-hybride/mvp-rxjava-hybride.iml" filepath="$PROJECT_DIR$/mvp-rxjava-hybride/mvp-rxjava-hybride.iml" />
       <module fileurl="file://$PROJECT_DIR$/toapp/toapp.iml" filepath="$PROJECT_DIR$/toapp/toapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todoapp-databinding/todoapp-databinding.iml" filepath="$PROJECT_DIR$/todoapp-databinding/todoapp-databinding.iml" />
       <module fileurl="file://$PROJECT_DIR$/todoapp-rxjava/todoapp-rxjava.iml" filepath="$PROJECT_DIR$/todoapp-rxjava/todoapp-rxjava.iml" />
     </modules>
   </component>

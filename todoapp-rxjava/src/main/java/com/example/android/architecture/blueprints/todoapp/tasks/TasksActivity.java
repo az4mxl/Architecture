@@ -18,6 +18,7 @@ package com.example.android.architecture.blueprints.todoapp.tasks;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
 import android.support.design.widget.NavigationView;
 import android.support.test.espresso.IdlingResource;
@@ -104,6 +105,13 @@ public class TasksActivity extends AppCompatActivity {
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                return false;
+            }
+        });
+
         navigationView.setNavigationItemSelectedListener(
                 menuItem -> {
                     switch (menuItem.getItemId()) {
@@ -111,10 +119,8 @@ public class TasksActivity extends AppCompatActivity {
                             // Do nothing, we're already on that screen
                             break;
                         case R.id.statistics_navigation_menu_item:
-                            Intent intent =
-                                    new Intent(TasksActivity.this, StatisticsActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                                    | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            Intent intent = new Intent(TasksActivity.this, StatisticsActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                             break;
                         default:

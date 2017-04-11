@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Architecture.iml" filepath="$PROJECT_DIR$/Architecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HideOnScrollExample/HideOnScrollExample.iml" filepath="$PROJECT_DIR$/HideOnScrollExample/HideOnScrollExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/apptest-databinding/apptest-databinding.iml" filepath="$PROJECT_DIR$/apptest-databinding/apptest-databinding.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvp-rxjava-hybride/mvp-rxjava-hybride.iml" filepath="$PROJECT_DIR$/mvp-rxjava-hybride/mvp-rxjava-hybride.iml" />

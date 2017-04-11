@@ -1,1 +1,1 @@
-include ':app', ':mvp-rxjava-hybride', ':toapp', ':todoapp-rxjava', ':todoapp-databinding', ':apptest-databinding'
+include ':app', ':mvp-rxjava-hybride', ':toapp', ':todoapp-rxjava', ':todoapp-databinding', ':apptest-databinding', ':HideOnScrollExample'

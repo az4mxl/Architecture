@@ -20,8 +20,7 @@ public class IncludeActivity extends BaseActivity implements OkListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(
-                this, R.layout.activity_include);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_include);
 
         binding.setListener(this);
         binding.setOkText("to toast");
